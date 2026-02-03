@@ -1,207 +1,201 @@
-     body {
-         font-family: Arial;
-         background: #f4f6f8;
-         padding: 20px
-     }
+/* ======================
+   BASE
+====================== */
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+}
 
-     .container {
-         max-width: 1200px;
-         margin: auto
-     }
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
 
-     h2 {
-         margin-bottom: 10px
-     }
+h2 {
+    margin-bottom: 10px;
+}
 
-     input,
-     select,
-     button {
-         padding: 6px;
-         margin: 4px;
-     }
+/* ======================
+   FORM
+====================== */
+.form-control {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-size: 14px;
+}
 
-     button {
-         cursor: pointer;
-     }
+.form-control:focus {
+    outline: none;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 3px rgba(13,110,253,.15);
+}
 
-     table {
-         width: 100%;
-         border-collapse: collapse;
-         background: #fff;
-     }
+/* ======================
+   BUTTON
+====================== */
+.btn {
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: background .2s, transform .1s;
+}
 
-     th,
-     td {
-         border: 1px solid #ddd;
-         padding: 8px;
-         text-align: center;
-     }
+.btn:active {
+    transform: scale(0.97);
+}
 
-     th {
-         background: #eee
-     }
+.btn-primary {
+    background: #0d6efd;
+    color: #fff;
+}
 
-     .progress {
-         height: 18px;
-         border-radius: 10px;
-         background: #ddd;
-         overflow: hidden;
-     }
+.btn-success {
+    background: #198754;
+    color: #fff;
+}
 
-     .progress-bar {
-         height: 100%;
-         width: 0%;
-         transition: 0.4s;
-     }
+/* ======================
+   TABLE
+====================== */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
 
-     .attendance {
-         display: grid;
-         grid-template-columns: repeat(7, 1fr);
-         gap: 2px;
-     }
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+}
 
-     .delete {
-         color: red;
-         cursor: pointer;
-         font-weight: bold;
-     }
+thead th {
+    background: #f8f9fa;
+    font-weight: 600;
+}
 
-     button {
-         padding: 6px 12px;
-         border-radius: 6px;
-         border: none;
-         cursor: pointer;
-         transition: 0.2s;
-     }
+th, td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eaeaea;
+    text-align: center;
+    white-space: nowrap;
+}
 
-     button:hover {
-         transform: scale(1.05);
-     }
+tr:hover {
+    background: #f4f6f8;
+}
 
-     .add-btn {
-         background: #3498db;
-         color: white;
-     }
+/* ======================
+   COLUMN SPECIFIC
+====================== */
+.col-no {
+    width: 40px;
+    font-size: 13px;
+    text-align: center;
+}
 
-     .save-btn {
-         background: #2ecc71;
-         color: white;
-     }
+.nama-col {
+    text-align: left;
+    min-width: 180px;
+}
 
-     .delete-btn {
-         color: red;
-         font-weight: bold;
-         cursor: pointer;
-     }
+.student-name {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.2;
+}
 
-     table {
-         width: 100%;
-         border-collapse: collapse;
-         margin-top: 15px;
-     }
+/* ======================
+   NILAI (DI BAWAH NAMA)
+====================== */
+.nilai-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 4px;
+    font-size: 13px;
+}
 
-     th,
-     td {
-         padding: 8px;
-         border-bottom: 1px solid #ddd;
-         text-align: center;
-     }
+.nilai-item {
+    background: #eef2ff;
+    padding: 3px 8px;
+    border-radius: 6px;
+    white-space: nowrap;
+}
 
-     tr:hover {
-         background: #f4f6f8;
-     }
+/* ======================
+   ATTENDANCE
+====================== */
+.attendance {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 3px;
+    font-size: 14px;
+    font-weight: 600;
+}
 
-     .progress {
-         height: 14px;
-         background: #ddd;
-         border-radius: 10px;
-         overflow: hidden;
-     }
+/* ======================
+   PROGRESS
+====================== */
+.progress-score {
+    font-size: 14px;
+    font-weight: 600;
+}
 
-     .progress-bar {
-         height: 100%;
-         transition: 0.4s;
-     }
+/* ======================
+   DELETE
+====================== */
+.delete {
+    color: red;
+    cursor: pointer;
+    font-weight: bold;
+}
 
-     tr {
-         transition: background-color 0.3s;
-     }
+/* ======================
+   MOBILE (HP)
+====================== */
+@media (max-width: 576px) {
 
-     tr:hover {
-         filter: brightness(97%);
-     }
+    table {
+        min-width: unset; /* KUNCI: BIAR BISA KECIL */
+    }
 
-     /* === FORM CONTROL (input & select) === */
-     .form-control {
-         padding: 8px 12px;
-         border-radius: 6px;
-         border: 1px solid #ced4da;
-         font-size: 14px;
-         transition: border-color .2s, box-shadow .2s;
-     }
+    th, td {
+        padding: 6px;
+        font-size: 12px;
+    }
 
-     .form-control:focus {
-         outline: none;
-         border-color: #86b7fe;
-         box-shadow: 0 0 0 3px rgba(13, 110, 253, .15);
-     }
+    .col-no {
+        width: 28px;
+        font-size: 11px;
+    }
 
-     /* === BUTTON STYLE === */
-     .btn {
-         padding: 8px 14px;
-         border-radius: 6px;
-         font-size: 14px;
-         border: none;
-         cursor: pointer;
-         display: inline-flex;
-         align-items: center;
-         gap: 6px;
-         transition: background .2s, transform .1s, box-shadow .1s;
-     }
+    .nama-col {
+        min-width: 140px;
+    }
 
-     .btn:active {
-         transform: scale(0.97);
-     }
+    .student-name {
+        font-size: 13px;
+    }
 
-     /* PRIMARY */
-     .btn-primary {
-         background: #0d6efd;
-         color: white;
-     }
+    /* Nilai 2-2 ke bawah */
+    .nilai-wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+        font-size: 11px;
+    }
 
-     .btn-primary:hover {
-         background: #0b5ed7;
-     }
-
-     /* SUCCESS */
-     .btn-success {
-         background: #198754;
-         color: white;
-     }
-
-     .btn-success:hover {
-         background: #157347;
-     }
-
-     /* LIGHT */
-     .btn-light {
-         background: #f8f9fa;
-         border: 1px solid #ced4da;
-     }
-
-     .btn-light:hover {
-         background: #e9ecef;
-     }
-
-     /* ICON EFFECT */
-     .btn i {
-         font-size: 15px;
-     }
-
-     /* FORM ROW */
-     .form-row {
-         display: flex;
-         gap: 8px;
-         align-items: center;
-         flex-wrap: wrap;
-     }
+    /* Kehadiran & progress lebih besar */
+    .attendance,
+    .progress-score {
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
