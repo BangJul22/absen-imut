@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Progress Nilai Siswa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <h2>📊 Progress Nilai Siswa</h2>
+
+        <div class="form-row">
+            <input id="studentName" class="form-control" placeholder="Nama siswa">
+            <button class="btn btn-primary" onclick="addStudent()">
+                ➕ Tambah Siswa
+            </button>
+        </div>
+        <br><br>
+
+        <div class="form-row" style="margin-top:10px">
+            <select id="studentSelect" class="form-control"></select>
+
+            <select id="scoreType" class="form-control">
+                <option value="">Pilih Nilai</option>
+                <option value="tugas1">Tugas 1</option>
+                <option value="tugas2">Tugas 2</option>
+                <option value="tugas3">Tugas 3</option>
+                <option value="praktik">Praktik</option>
+                <option value="uts">UTS</option>
+                <option value="uas">UAS</option>
+            </select>
+
+            <input type="number" id="scoreValue" class="form-control" placeholder="0–100">
+
+            <button class="btn btn-success" onclick="inputScore()">
+                💾 Simpan Nilai
+            </button>
+        </div>
+
+
+        <br><br>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nama</th>
+                    <th>Kehadiran (14)</th>
+                    <th>Progress</th>
+                    <th>Hapus</th>
+                </tr>
+            </thead>
+            <tbody id="tableBody"></tbody>
+        </table>
+
+    </div>
+
+    <script src="js/absen.js"></script>
+
+</body>
+
+</html>
